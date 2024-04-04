@@ -1,0 +1,18 @@
+{% url 'posts:main-board' as path_to_home %}
+{% url 'profiles:my-profile' as path_to_my_profile %}
+
+{% with request.path as current_path %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light ml-2">
+  <div class="container"> <!-- Wrap the contents in a container for better layout control -->
+    <a class="navbar-brand ml-3" href="{{ path_to_home }}">Posts_Project</a>
+    <ul class="navbar-nav mx-auto d-lg-flex flex-row"> <!-- Utilize d-lg-flex and flex-row classes -->
+      <li class="nav-item{% if current_path == path_to_home %} active{% endif %}">
+        <a class="nav-link" href="{{ path_to_home }}">Home</a>
+      </li>
+      <li class="nav-item{% if current_path == path_to_my_profile %} active{% endif %}">
+        <a class="nav-link" href="{{ path_to_my_profile }}">Profile</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endwith %}

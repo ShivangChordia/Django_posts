@@ -51,6 +51,10 @@ $.ajax({
         bodyEl.setAttribute('class', 'mt-1')
         bodyEl.setAttribute('id', 'body')
 
+        const authorName= document.getElementById('author-name')
+
+        authorName.textContent=data.author
+
         titleEl.textContent = data.title
         bodyEl.textContent = data.body
 

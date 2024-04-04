@@ -143,4 +143,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Crispy Forms settings
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+LOGIN_URL = '/admin/'
+
 
